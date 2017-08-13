@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2414d0e5-929d-4f98-be51-e93b494074a6" name="Default" comment="Testing commit">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/MovieTrailer.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+    <list default="true" id="2414d0e5-929d-4f98-be51-e93b494074a6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -362,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502634618552</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="removing pyc files">
+      <created>1502634707296</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1502634707296</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -417,7 +420,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Testing commit" />
     <MESSAGE value="Added git ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added git ignore" />
+    <MESSAGE value="removing pyc files" />
+    <option name="LAST_COMMIT_MESSAGE" value="removing pyc files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
