@@ -7,7 +7,7 @@ Movie Trailer project opens a html webpage with the movie names and plays their 
     Python 2.x
     IDLE
     
-#Technical Details:
+# Technical Details:
     
 * Fork or download the repository and clone it on your computer
 * To open the webpage run the Trailer_test.py file
