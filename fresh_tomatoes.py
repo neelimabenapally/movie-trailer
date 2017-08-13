@@ -105,7 +105,7 @@ main_page_content = '''
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
+            <a class="navbar-brand" href="#">Movie Trailer</a>
           </div>
         </div>
       </div>
@@ -129,33 +129,28 @@ movie_tile_content = '''
 def create_movie_tiles_content(movies):
     # The HTML content for this section of the page
     content = ''
-    for movie in movies.keys():
-        movies_name = movie
-        for x in movies[movie]:
-            if(re.match(r'(u\').*\'',movies[movie].val)):
-                movies_key = movies[movie].val
-            if(re.match(r'(u\'/).*\.(jpg)$',movies[movie].val)):
-                movies_image_path = movies[movie].val
-                # Extract the youtube ID from the url
-        # youtube_id_match = re.search(r'(?<=v=)[^&#]+', movie.trailer)
-        # youtube_id_match = youtube_id_match or re.search(r'(?<=be/)[^&#]+', movie.trailer)
-        # trailer_youtube_id = youtube_id_match.group(0) if youtube_id_match else None
+    for k in movies:
+        movie_name= k
+        movie  = movies[k]
+        movies_id = movie[0]
+        movies_image_path = movie[1]
+        image_url = "http://image.tmdb.org/t/p/w342/" + movies_image_path
+        print ("image path is " + image_url)
 
         # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
-            # movie_title=movie.keys(),
-            # poster_image_url=movie.poster_image,
-            # trailer_youtube_id=trailer_youtube_id
-            movie_title=movies_name,
-            poster_image_url="http://image.tmdb.org/t/p"+movies_image_path,
-            trailer_youtube_id=movies_key
+            movie_title=movie_name,
+            poster_image_url=image_url,
+            trailer_youtube_id=movies_id
         )
     return content
+
 
 
 def open_movies_page(movies):
     # Create or overwrite the output file
     output_file = open('fresh_tomatoes.html', 'w')
+    print("fresh tomatoes" + str(movies))
 
     # Replace the placeholder for the movie tiles with the actual dynamically generated content
     rendered_content = main_page_content.format(movie_tiles=create_movie_tiles_content(movies))
